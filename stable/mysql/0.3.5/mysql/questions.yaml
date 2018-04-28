@@ -3,38 +3,54 @@ version: "0.3.5"
 description: "最牛逼的开源数据库"
 minApiVersion: "0.0.0"
 maxApiVersion: "100.100.100"
-questions:
-  - variable: "service.port"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "persistence.size"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "service.port"
+    value: 3306
+    required: true
     label: "MySQL端口号"
     description:
+  - type: "input"
+    subType: "password"
+    key: "mysqlRootPassword"
     required: true
-    type: "int"
-    default: 3306
-  - variable: "mysqlRootPassword"
-    label: "MySQL Root帐号密码"
+    label: "MySQL Root密码"
     description:
-    required: true
-    type: "password"
-  - variable: "mysqlDatabase"
+#  - type: "radio"
+#    key: "mysqlAllowEmptyPassword"
+#    value: "no"
+#    label: "MySQL允许空密码"
+#    description: "选择(是)如果允许超级用户密码为空时容器也可以启动"
+#    options:
+#      - { key: "yes", value: "是" }
+#      - { key: "no", value: "否" }
+  - type: "input"
+    key: "mysqlDatabase"
+    required: false
     label: "MySQL数据库名"
     description: "容器启动时自动创建的数据库(可选)"
+  - type: "input"
+    key: "mysqlUser"
     required: false
-    type: "string"
-  - variable: "mysqlAllowEmptyPassword"
-    label: "MySQL允许空密码"
-    description: "选择(是)如果允许超级用户密码为空时容器也可以启动"
-    type: "enum"
-    options:
-      - "yes"
-      - "no"
-    default: "no"
-    required: false
-  - variable: "mysqlUser"
     label: "MySQL用户名"
     description: "额外的超级用户(如果填写了必须提供密码)"
+  - type: "input"
+    subType: "password"
+    key: "mysqlPassword"
     required: false
-    type: "string"
-  - variable: "mysqlPassword"
     label: "MySQL密码"
     description: "额外的超级用户密码"
-    required: false
