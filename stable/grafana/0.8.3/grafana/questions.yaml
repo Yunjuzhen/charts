@@ -1,0 +1,36 @@
+name: "grafana"
+version: "0.8.3"
+description:
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "persistentVolume.size"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "replicaCount"
+    required: true
+    label: "副本数"
+    description:
+  - type: "input"
+    key: "adminUser"
+    required: true
+    label: "管理员用户名"
+    description:
+  - type: "input"
+    subType: "password"
+    key: "adminPassword"
+    required: false
+    label: "管理员密码"
+    description:

@@ -1,0 +1,7 @@
+name: "acs-engine-autoscaler"
+version: "0.3.0"
+description: "acs-engine-autoscaler is a node-level autoscaler for Kubernetes for clusters created with acs-engine."
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+values:

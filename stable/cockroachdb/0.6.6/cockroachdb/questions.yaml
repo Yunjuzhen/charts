@@ -1,0 +1,37 @@
+name: "cockroachdb"
+version: "0.6.6"
+description: "CockroachDB"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "Resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "Resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "Storage"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "Replicas"
+    required: true
+    label: "副本数"
+    description:
+  - type: "input"
+    subType: "number"
+    key: "GrpcPort"
+    required: true
+    label: "GRPC端口"
+    description:
+  - type: "input"
+    subType: "number"
+    key: "HttpPort"
+    required: true
+    label: "HTTP端口"
+    description:

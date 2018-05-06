@@ -1,0 +1,24 @@
+name: "mongodb"
+version: "0.4.27"
+description: "MongoDB"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "persistence.size"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "password"
+    key: "mongodbRootPassword"
+    label: "MongoDB Root密码"
+    description:

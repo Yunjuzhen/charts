@@ -1,0 +1,30 @@
+name: "mssql"
+version: "0.1.7"
+description: "Microsoft SQL Server 2017 on Linux"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    value: "100m"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    value: "2Gi"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "persistence.dataSize"
+    required: true
+    label: 数据存储
+  - type: "input"
+    key: "persistence.transactionLogSize"
+    required: true
+    label: 事务日志存储
+values:
+  - type: "input"
+    subType: "password"
+    key: "sapassword"
+    label: "MsSQL SA密码"
+    description:

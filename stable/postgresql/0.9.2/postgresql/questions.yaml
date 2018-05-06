@@ -1,0 +1,39 @@
+name: "postgres"
+version: "0.3.0"
+description: "PostgreSQL"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "input"
+    key: "persistence.size"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "service.port"
+    required: true
+    label: "PostgreSQL端口号"
+    description:
+  - type: "input"
+    key: "postgresDatabase"
+    label: "PostgreSQL数据库名"
+    description: "容器启动时自动创建的数据库(可选)"
+  - type: "input"
+    key: "postgresUser"
+    value: "postgres"
+    label: "PostgreSQL用户名"
+    description:
+  - type: "input"
+    subType: "password"
+    key: "postgresPassword"
+    label: "PostgreSQL密码"
+    description:

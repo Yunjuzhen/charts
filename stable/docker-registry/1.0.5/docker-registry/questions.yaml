@@ -1,0 +1,29 @@
+name: "docker-registry"
+version: "1.0.5"
+description:
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+  - type: "switch"
+    key: "persistence.enabled"
+    required: true
+    label: 持久化存储
+  - type: "input"
+    key: "persistence.size"
+    required: true
+    label: 存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "replicaCount"
+    required: true
+    label: "副本数"
+    description:

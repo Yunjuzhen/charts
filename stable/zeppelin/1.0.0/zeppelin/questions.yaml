@@ -1,0 +1,15 @@
+name: "zeppelin"
+version: "1.0.0"
+description: "Zeppelin is a web based notebook for interactive data analytics with Spark, SQL and Scala."
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "zeppelin.resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "zeppelin.resources.requests.memory"
+    required: true
+    label: 内存
+values:

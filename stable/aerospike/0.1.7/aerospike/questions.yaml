@@ -1,0 +1,15 @@
+name: "aerospike"
+version: "0.1.7"
+description: "Aerospike"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+values:

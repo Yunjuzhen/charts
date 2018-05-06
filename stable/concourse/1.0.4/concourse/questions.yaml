@@ -1,0 +1,55 @@
+name: "concourse"
+version: "1.0.4"
+description:
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "web.resources.requests.cpu"
+    required: true
+    label: "Web节点CPU"
+  - type: "input"
+    key: "web.resources.requests.memory"
+    required: true
+    label: "Web节点内存"
+  - type: "input"
+    key: "worker.resources.requests.cpu"
+    required: true
+    label: "Worker节点CPU"
+  - type: "input"
+    key: "worker.resources.requests.memory"
+    required: true
+    label: "Worker节点内存"
+  - type: "input"
+    key: "persistence.worker.size"
+    required: true
+    label: Worker节点存储
+values:
+  - type: "input"
+    subType: "number"
+    key: "web.replicas"
+    required: true
+    label: "Web节点副本数"
+    description:
+  - type: "input"
+    subType: "number"
+    key: "worker.replicas"
+    required: true
+    label: "Worker节点副本数"
+    description:
+  - type: "input"
+    key: "postgresql.postgresUser"
+    required: true
+    label: "PostgreSQL用户名"
+    description:
+  - type: "input"
+    subType: "password"
+    key: "postgresql.postgresPassword"
+    required: false
+    label: "PostgreSQL密码"
+    description: "不填系统会自动产生"
+  - type: "input"
+    key: "postgresql.postgresDatabase"
+    required: true
+    label: "PostgreSQL数据库"
+    description:

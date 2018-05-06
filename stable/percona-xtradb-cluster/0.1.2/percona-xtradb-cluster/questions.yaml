@@ -1,0 +1,47 @@
+name: "percona-xtradb-cluster"
+version: "0.1.2"
+description: "Percona XtraDB Cluster"
+minApiVersion: "0.0.0"
+maxApiVersion: "100.100.100"
+resources:
+  - type: "input"
+    key: "resources.requests.cpu"
+    required: true
+    label: CPU
+  - type: "input"
+    key: "resources.requests.memory"
+    required: true
+    label: 内存
+values:
+  - type: "input"
+    subType: "number"
+    key: "replicas"
+    required: true
+    label: "副本数"
+    description:
+  - type: "input"
+    subType: "password"
+    key: "mysqlRootPassword"
+    label: "MySQL Root密码"
+    description:
+  - type: "input"
+    key: "mysqlDatabase"
+    required: false
+    label: "MySQL数据库名"
+    description: "容器启动时自动创建的数据库(可选)"
+  - type: "input"
+    key: "mysqlUser"
+    required: false
+    label: "MySQL用户名"
+    description: "额外的超级用户(如果填写了必须提供密码)"
+  - type: "input"
+    subType: "password"
+    key: "mysqlPassword"
+    required: false
+    label: "MySQL密码"
+    description: "额外的超级用户密码"
+  - type: "input"
+    subType: "password"
+    key: "xtraBackupPassword"
+    required: false
+    label: "XtraDB备份密码"
