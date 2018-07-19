@@ -38064,4 +38064,14 @@ entries:
     urls:
     - https://kubernetes-charts.storage.googleapis.com/zetcd-0.1.0.tgz
     version: 0.1.0
-generated: 2018-03-17T00:26:34.91344976Z
+  hello-world:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-07-19T15:02:12.912875054+08:00
+    description: A Helm chart for Kubernetes
+    digest: 00d3dd0b553c3cb443fd8fca3b1c17b97ec478458eaa56ddff868e2d2605bc7f
+    name: hello-world
+    urls:
+    - http://127.0.0.1:8879/hello-world-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-07-19T15:02:12.912137248+08:00
