@@ -38074,4 +38074,14 @@ entries:
     urls:
     - http://127.0.0.1:8879/hello-world-0.1.0.tgz
     version: 0.1.0
+  echoheaders:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-07-24T16:02:41.627754132+08:00
+    description: A Helm chart for Kubernetes
+    digest: 7ad13f510ba9775376d4650d669f3982c7c0a61db3a02d22386f5f3c7a56b41d
+    name: echoheaders
+    urls:
+    - echoheaders-0.0.1.tgz
+    version: 0.0.1
 generated: 2018-07-19T15:02:12.912137248+08:00
